@@ -1,6 +1,10 @@
 %Project Narrative
-\documentclass[11pt]{article}
+\documentclass[11pt,letterpaper]{article}
 \usepackage[margin=1in]{geometry}
+\usepackage[]{natbib}
+\bibpunct[; ]{[}{]}{,}{n}{}{;} 
+\bibliographystyle{unsrtnat}
+\setcitestyle{plain}
 \usepackage{color}
 \usepackage{graphicx}
 \usepackage{url}
@@ -10,13 +14,10 @@
 \usepackage{amssymb}
 \usepackage{caption}
 \usepackage{subcaption}
-\usepackage[round]{natbib}
-\bibpunct[; ]{[}{]}{,}{n}{}{;} 
-\bibliographystyle{abbrvnat}
-\setcitestyle{authoryear,open={(},close={)}}
 \usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
 \usepackage[innercaption]{sidecap} % side captions
 \sidecaptionvpos{figure}{c}
+\usepackage{parskip}
 
 \begin{document}
 
@@ -31,22 +32,23 @@
 %Figures and accompanying short legends may be interleaved with the body of the research approach text.
 %Figures, legends, and essential references are not included in the 1,500 word limit.
 
+%INTRO 391 words
 
-\noindent My research program applies population genetic approaches to understand the genomic basis of evolution change in maize (\emph{Zea mays} ssp. {mays}) and its wild relatives the teosintes.  
-Agricultural plants provide a particularly excellent system for basic discovery, with their rich history of basic genetic research, ample modern genetic resources, and the opportunity to sample or replicate genotypes across a wide array of environments.
+My research program applies population genomic approaches to understand the genomic basis of evolutionary change in maize (\emph{Zea mays} ssp. {mays}) and its wild relatives, the teosintes.  
+Agricultural plants provide a particularly excellent system for basic discovery, with their rich history of basic genetic research, ample modern genomic resources, and the opportunity to sample or replicate genotypes across a wide array of environments.
 Among crop plants, maize provides perhaps the best opportunities for basic research and discovery.
 In addition to its status as the country's most economically valuable crop, maize is also one of the oldest model organisms, and its rich phenotypic and genetic diversity have enabled a number of basic scientific discoveries, from hybrid vigor \citep{shull1908composition} to the relationship between crossing over and recombination \citep{creighton1931correlation}, meiotic drive \citep{rhoades1942preferential}, and transposable elements \citep{mcclintock1950origin}. 
-Maize continues to be an important model in the genomics era \citep{nannas2015genetic}, and the publicly available genomic and phenotypic resources available are unparalleled among other crops: more than 1,000 genomes have been resequenced, more than 20,000 individuals genotyped at $\approx 1$ million SNPs, and association mapping studies now approach scales rarely seen outside of biomedical studies \citep[e.g. 65,000 plots in][]{peiffer2014genetic}.\\
+Maize continues to be an important model in the genomics era \citep{nannas2015genetic}, and the publicly available genomic and phenotypic resources are unparalleled among other crops: more than 1,000 genomes have been resequenced, more than 20,000 individuals genotyped at $\approx 1$ million SNPs, and association mapping studies now approach scales rarely seen outside of biomedical studies \citep[e.g. 65,000 plots in][]{peiffer2014genetic}.\
 
-\noindent Maize is particularly well-suited as a model to study plant evolution.
-Both domestication and modern breeding can be seen as long-term experimental evolution, and both population genomic \citep{hufford2012comparative} and archaeological \citep{purugganan2011archaeological} data suggest that these are likely relevant and representative of patterns of evolution in natural populations.
-Maize has a large genome compared to many other model plants --- the maize reference is 2.3Gb \citep{schnable2009the-b73-maize} ---  but is in fact  close to the median (and below the mean) genome size for most flowering plants \citep{leitch2013genome}, and any understanding of plant evolution would be incomplete without consdiering the structural variation and repeat evolution inherent in such complex genomes.
-Finally, the wild relatives of maize, collectively referred to as teosinte, inhabiting a diverse array of environments, and include both endangered species and taxa with large, stable, randomly-mating populations \citep{hufford2012teosinte}.
-Because all of these species are closely related, genetic resources developed in maize are often transferred seemlessly to these wild taxa as well \citep[e.g.][]{pyhajarvi2013complex,fang2012megabase}.
-Though much effort has been made to apply the genomic resources of maize to accelerate plant breeding, there are surprisingly few efforts to take advantage of maize as a model to more broadly understand plant adaptation and evolution.  
-Below I describe current and planned population genetic work in my lab which aims to use maize and teosinte as a model to understand plant adaptation and genome evolution.  
+Maize is particularly well-suited as a model to study plant evolution.
+Domestication and modern breeding can be seen as experimental evolution, and both population genomic \citep{hufford2012comparative} and archaeological data \citep{purugganan2011archaeological} suggest that the rate and magnitude of adaptation in these systems is likely similar to natural populations.
+While maize has a large genome compared to many other model plants --- the maize reference is 2.3Gb \citep{schnable2009the-b73-maize} ---  it is in fact  close to the median genome size for most flowering plants \citep{leitch2013genome}, and thus an ideal organism in which to study transposable elements and structural variation common in complex plant genomes.  
+Finally, the wild relatives of maize, collectively referred to as teosintes, inhabit a diverse array of environments, and include both endangered species and taxa with large, stable, randomly-mating populations \citep{hufford2012teosinte}.
+Because all of these species are closely related, genomic resources developed in maize can often be transferred seamlessly to these wild taxa as well \citep[e.g.][]{pyhajarvi2013complex,fang2012megabase}.
+Though much effort has been made to apply the genomic resources of maize to accelerate crop breeding, there are surprisingly few efforts to study maize evolution. 
+Below I describe current and planned population genomic work in my lab which aims to use maize and teosinte as models to understand plant adaptation and genome evolution.  
 
-\section*{Domestication}
+\section*{Domestication} %261
 
 Plant domestication represents an opportunity to understand not only the genetic basis of evolutionary change, but also how the complex interplay of demography and selection shape modern genetic and phenotypic diversity.
 My group has worked to understand the process of selection during domestication, documenting its polygenic nature \citep{hufford2012comparative} and the importance of selection on multiple beneficial mutations \citep{wills2013many} and standing genetic variation \citep{wills2013many, studer2011identification}. 
@@ -54,17 +56,32 @@ Our current work focuses not on finding the targets of selection, but instead on
 Maize underwent a demographic bottleneck during domestication, reducing its effective population size and thus the efficacy of purifying selection to remove deleterious variants (Figure \ref{fig:purify}A).
 Following its domestication, however, maize spread rapidly across the Americas, and this explosive population growth --- our estimates of the current effective size of open-pollinated maize exceed $10^12$ --- has lead to a higher efficacy of selection on new mutations, and patterns of diversity near genes suggest that new mutations in maize are more strongly selected than those in its wild-ancestor (Figure \ref{fig:purify}B).
 Population demography also has the potential to change the size, number, and dominance of loci underlying phenotypic traits \citep{lohmueller2014impact,gazave2013population}.
-Our future work will utilize data from large-scale association mapping studies in both domesticated and wild populations, coupled with population genetic inference of demographic change and the fitness consequences of new mutations, to study how the process of domestication may have shaped the genetic architecture of phenotypic traits.
+Our future work will utilize data from large-scale association mapping studies in both domesticated and wild populations, coupled with population genomic inference of demographic change and the fitness consequences of new mutations, to study how the process of domestication may have shaped the genetic architecture of phenotypic traits.
 Results from these studies will help us better understand the functional consequences of new mutations as well as improve our utilization of genetic diversity to predict phenotype.
 
-\begin{figure*}[tb]
+\begin{figure*}[h]
 \centering
-\includegraphics[width=.5\textwidth]{figs/distanceToGene_WithSignificance_Folded2_manuscript.png} \includegraphics[width=.5\textwidth]{figs/distanceToGene_WithSignificance_Singletons_Downsampled_threeLines_manuscript.png}
+\includegraphics[width=.45\textwidth]{figs/distanceToGene_WithSignificance_Folded2_manuscript.png} \includegraphics[width=.45\textwidth]{figs/distanceToGene_WithSignificance_Singletons_Downsampled_threeLines_manuscript.png}
 \caption{Relative diversity as a function of distance to nearest gene. 
-\textbf{A} Pairwise nucleotide diversity $\pi$ is most influenced by intermediate frequency alleles and reflective of long-term demography. 
+A) Pairwise nucleotide diversity $\pi$ is most influenced by intermediate frequency alleles and reflective of long-term demography. 
 The stronger effect of purifying selection on $\pi$  in teosinte is consistent with its larger long-term effective population size. 
- \textbf{B} For very recent variants such as those found in a single individuals, purifying selection appears stronger in maize, reflecting its exponential growth following domestication. \label{fig:purify}}
+B) For very recent variants such as those found in a single individuals, purifying selection appears stronger in maize, reflecting its exponential growth following domestication. \label{fig:purify}}
 \end{figure*}
+
+
+
+\section*{Local adaptation} %167
+% architecture, biotic interactions, climate, introgression
+
+After domestication, rapidly spread across the Americas, adapting to a wide range of environments. 
+Today maize is found growing from sea level to altitudes of $>4,000$m, and from deserts to near-flooded conditions; maize is grown across a broader geographic breadth than any of the world's other staple crops \citep{hake2015genetic}.
+In addition, the wild relatives of maize have adaptated to environments varying widely in eleveation, temperature, and moisture gradients. 
+Our prevous work has shown that adaptation in teosinte is often restricted to individual local populations, and that selection has taken advantage of both regulatory and structural variation \citep{pyhajarvi2013complex}.
+Our recent efforts have investigated convergent phenotypic evolution to high elevation habitats in maize and teosinte.
+This work has shown that rapid adaptation was made possible by extensive standing variation, leading to virtually no overlap in genes showing evidence of selection in spite of strong phenotypic simiarilites \citep{Takuno15062015}.
+We have also shown the importance of adaptive introgression, demonstraintg that gene flow from teosinte enabled maize in Mexico to rapidly adapt to novel conditions \citep{hufford2013genomic}.
+
+Our current work on local adaptation includes biotic interactions between teosinte and soil microbes, using common garden data to investigate selection on phenotypes, variation in inbreeding depression across maize and teosinte population, and deep sequencing of the genome and methylome of a number of plants from a single local population to investigate extremely local patterns of adaptation.  
 
 {
 \color{red}  
@@ -72,25 +89,6 @@ The stronger effect of purifying selection on $\pi$  in teosinte is consistent w
 STOP HERE \\
 \noindent\makebox[\linewidth]{\rule{\linewidth}{0.4pt}}
 }
-
-
-
-
-
-
-\section*{Local adaptation}
-% architecture, biotic interactions, climate, introgression
-
-convergent evolution
-crop gene flow
-inversions regulatory
-
-Protein-coding genes have often been considered the major source of functional variation, and evidence from small model plant genomes such as \emph{Arabidopsis} \citep[e.g.][]{hancock2011adaptation} supports such claims. 
-However, most flowering plants have large genomes, like maize, and our work has indicated that in such large genomes other forms of variation likely play a much more important role.  
-We have shown that selection has taken extensive advantage of regulatory \citep{swanson2012reshaping,pyhajarvi2013complex} and structural variation --- including inversions \citep{pyhajarvi2013complex,fang2012megabase}, transposable element insertions \citep{studer2011identification,makarevitch2015transposable}, and likely copy-number variation \citep{chia2012maize} --- in both natural and domesticated populations. We believe such noncoding variation will be shown responsible for a substantial fraction of adaptive variation in most plant genomes.
-Differences in large complex genomes -- Fraser \citep{fraser2013gene} vs. \citep{pyhajarvi2013complex} or \citep{hancock2011adaptation} and gene expression \citep{hufford2012comparative}
-
-
 
 \section*{Experimental evolution}
 
